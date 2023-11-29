@@ -11,6 +11,7 @@
     </head>
     <body class="antialiased">
         <h1>筋トレblog</h1>
+        <a href='/posts/create'>本日のトレーニングを投稿</a>
          <div class='posts'>
              @foreach($posts as $post)
              <div class='post'>
