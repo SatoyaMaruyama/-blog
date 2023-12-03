@@ -9,6 +9,7 @@
 
         
     </head>
+    <x-app-layout>
     <body>
     　<h2>タイトル</h2>
       <h1 class="title">
@@ -25,4 +26,5 @@
         </div>
         
     </body>
+    </x-app-layout>
 </html>
