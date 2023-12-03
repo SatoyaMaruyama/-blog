@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <title>Blog</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
+    <x-app-layout>
+    <x-slot name="header">
+        <h2 class="text-4xl font-bold">
+            {{ __('Dashboard') }}
+        </h2>
         
-    </head>
-    <body class="antialiased">
         <h1>筋トレblog</h1>
         <a href='/posts/create'>本日のトレーニングを投稿</a>
          <div class='posts'>
@@ -26,5 +21,4 @@
             {{ $posts->links() }}
           </div>
        
-    </body>
-</html>
+    </x-app-layout>
