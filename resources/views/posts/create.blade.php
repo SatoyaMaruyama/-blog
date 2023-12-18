@@ -19,6 +19,7 @@
                 <input type="text" name="post[title]" placeholder="タイトル" value="{{ old('post.title') }}"/>
                 <p class="title__error" style="color:red">{{ $errors->first('post.title') }}</p>
             </div>
+            
             <div class="body">
                 <h2>Body</h2>
                 <textarea name="post[body]" placeholder="今日も1日お疲れさまでした。">{{ old('post.body') }}</textarea>
@@ -26,9 +27,20 @@
             </div>
             <input type="submit" value="保存"/>
         </form>
+        
         <div class="footer">
             <a href="/">戻る</a>
         </div>
+        
+        <div class="record">
+          <h2>Record</h2>
+         <select name="post[record_id]">
+         @foreach($records as $record)
+            <option value="{{ $record->id }}">{{ $record->name }}</option>
+         @endforeach
+         </select>
+        </div>
+        
     </body>
     </x-app-layout>
 </html>
