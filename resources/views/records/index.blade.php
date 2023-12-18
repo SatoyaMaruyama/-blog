@@ -1,5 +1,4 @@
-
-    <x-app-layout>
+<x-app-layout>
     <x-slot name="header">
         <h2 class="text-4xl font-bold">
             {{ __('Dashboard') }}
@@ -16,12 +15,11 @@
                  	<a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
                  	</h2>
                  <p class='body'>{{ $post->body }}</p>
-                  <a href="/records/{{ $post->record->id }}">{{ $post->record->name }}</a>  
              </div>
              @endforeach
          </div>
           <div class='paginate'>
             {{ $posts->links() }}
           </div>
-               
+            <a href="/records/{{ $post->record->id }}">{{ $post->record->name }}</a>       
     </x-app-layout>

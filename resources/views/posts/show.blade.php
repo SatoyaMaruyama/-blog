@@ -12,6 +12,8 @@
     <x-app-layout>
     <body>
     　<h2>タイトル</h2>
+    　<a href="">{{ $post->record->name }}</a>
+    　
       <h1 class="title">
             {{ $post->title }}
         </h1>
@@ -24,7 +26,7 @@
         <div class="footer">
             <a href="/">戻る</a>
         </div>
-        
+        <a href="/records/{{ $post->record->id }}">{{ $post->record->name }}</a> 
     </body>
     </x-app-layout>
 </html>
