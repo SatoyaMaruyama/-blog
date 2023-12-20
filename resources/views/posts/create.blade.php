@@ -33,11 +33,12 @@
         </div>
         
         <div class="record">
-          <h2>Record</h2>
-         <select name="post[record_id]">
+          <a href='/records/index'>トレーニングを追加</a>
+        
          @foreach($records as $record)
             <option value="{{ $record->id }}">{{ $record->name }}</option>
          @endforeach
+         
          </select>
         </div>
         
